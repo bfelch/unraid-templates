@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>boobjuice</Name>
+  <Repository>bfelch/boobjuice:latest</Repository>
+  <Registry>https://hub.docker.com/r/bfelch/boobjuice/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/bfelch/boobjuice/</Support>
+  <Project>https://github.com/bfelch/boobjuice-web-app</Project>
+  <Overview>A simple webapp for recording, maintaining, and viewing milk pumping volumes</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8008]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/bfelch/boobjuice-web-app/raw/main/boobjuice/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1720979713</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Host Port 1" Target="5000" Default="5000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8008</Config>
+  <Config Name="MariaDB Database" Target="MARIA_DATABASE" Default="boobjuicedb" Mode="" Description="The name of the database this app will use. Should already be configured within mariaDB." Type="Variable" Display="always" Required="true" Mask="false">boobjuicedb</Config>
+  <Config Name="MariaDB Username" Target="MARIA_USERNAME" Default="boobjuiceuser" Mode="" Description="The user this app will use to connect to the database. This should already be configured within mariaDB." Type="Variable" Display="always" Required="true" Mask="false">boobjuiceuser</Config>
+  <Config Name="MariaDB Password" Target="MARIA_PASSWORD" Default="" Mode="" Description="The password this app will use to connect to the database. This should already be configured within mariaDB for the provided username." Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="MariaDB Host IP" Target="MARIA_HOST" Default="192.168.1.X" Mode="" Description="The ip of the mariaDB container." Type="Variable" Display="always" Required="true" Mask="false">192.168.1.X</Config>
+  <Config Name="MariaDB Port" Target="MARIA_PORT" Default="3306" Mode="" Description="The port that mariaDB was configured to use." Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
+</Container>
